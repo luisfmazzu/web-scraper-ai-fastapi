@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./deploy/dockerfiles/Dockerfile
+    env_file:
+      - ".env"
+    volumes:
+      - ./:/code
+    ports:
+      - "${PORT}:${PORT}"
