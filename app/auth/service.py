@@ -1,11 +1,15 @@
 from app.config import database
+from .repository.repository import AuthRepository
 
 
 class Service:
     def __init__(self):
-        pass
+        self.database = database
+        self.auth_repository = AuthRepository(self.database)
 
 
 def get_service():
-    svc = Service()
     return svc
+
+
+svc = Service()

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "fastapi-web-scraper-ai"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = ["Luis Ortiz <luisfmazzu@gmail.com>"]
@@ -15,7 +15,16 @@ uvicorn= {extras = ["standard"], version = "^0.20.0"}
 python-multipart = "^0.0.6"
 pymongo = {extras = ["srv"], version = "^4.3.3"}
 orjson = "^3.9.1"
+structlog = "^24.4.0"
+pandas = "^2.2.3"
+bs4 = "^0.0.2"
+html2text = "^2024.2.26"
+tiktoken = "^0.8.0"
+openai = "^1.51.0"
+selenium = "^4.25.0"
 
+[tool.poetry.scripts]
+service = "app.main:run"
 
 [tool.poetry.group.dev.dependencies]
 types-python-jose = "^3.3.4.7"
